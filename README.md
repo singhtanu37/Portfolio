@@ -1,10 +1,10 @@
 # Personal Portfolio
 
 ## Live Website
-https://singhtanu37.github.io/Personal-Portfolio/
+https://singhtanu37.github.io/Portfolio/
 
 ## GitHub Repository
-https://github.com/singhtanu37/Personal-Portfolio
+https://github.com/singhtanu37/Portfolio
 
 ## Screenshots
 
