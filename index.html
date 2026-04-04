@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanu Kumari | Portfolio</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        darkBg: '#0f172a',
+                        darkCard: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Phosphor Icons for beautiful SVG icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        /* Custom animations */
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-200 transition-colors duration-300 font-sans selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-darkBg/80 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <span class="font-bold text-xl tracking-tight text-primary">TK.</span>
+                <div class="flex items-center gap-6">
+                    <div class="hidden md:flex space-x-6 text-sm font-medium">
+                        <a href="#about" class="hover:text-primary transition-colors">About</a>
+                        <a href="#education" class="hover:text-primary transition-colors">Education</a>
+                        <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                        <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                    </div>
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="ph ph-moon text-xl dark:hidden"></i>
+                        <i class="ph ph-sun text-xl hidden dark:block text-yellow-400"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Hero Section -->
+        <section id="about" class="py-16 md:py-24 flex flex-col items-center text-center fade-in">
+            <div class="w-24 h-24 bg-gradient-to-tr from-primary to-purple-500 rounded-full flex items-center justify-center text-4xl text-white font-bold shadow-lg mb-6 shadow-primary/30">
+                TK
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+                Hi, I'm <span class="text-primary">Tanu Kumari</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mb-8">
+                B.Tech Student (CSE - Cloud Computing) at SRM IST, Kattankulathur. Passionate about AI/ML, Cloud Technologies, and building scalable software.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl mt-4">
+                <div class="bg-white dark:bg-darkCard p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                    <i class="ph ph-identification-card text-2xl text-primary mb-2"></i>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Reg No</p>
+                    <p class="font-semibold text-sm">RA2511028010162</p>
+                </div>
+                <div class="bg-white dark:bg-darkCard p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                    <i class="ph ph-calendar-blank text-2xl text-primary mb-2"></i>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Year / Sem</p>
+                    <p class="font-semibold text-sm">1st Year / 2nd Sem</p>
+                </div>
+                <div class="bg-white dark:bg-darkCard p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                    <i class="ph ph-users text-2xl text-primary mb-2"></i>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Section</p>
+                    <p class="font-semibold text-sm">AI1</p>
+                </div>
+                <div class="bg-white dark:bg-darkCard p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                    <i class="ph ph-cloud text-2xl text-primary mb-2"></i>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Specialization</p>
+                    <p class="font-semibold text-sm">Cloud Computing</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-16 fade-in delay-100 border-t border-gray-200 dark:border-gray-800">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <i class="ph ph-graduation-cap text-primary"></i> Education
+            </h2>
+            <div class="space-y-6">
+                <!-- University -->
+                <div class="relative pl-8 border-l-2 border-primary/30">
+                    <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1 ring-4 ring-white dark:ring-darkBg"></div>
+                    <h3 class="text-xl font-bold">B.Tech - Computer Science & Engineering</h3>
+                    <p class="text-primary font-medium mb-1">SRM Institute of Science and Technology, Kattankulathur, Chennai</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Currently Enrolled • Specialization in Cloud Computing</p>
+                </div>
+                <!-- 12th Grade -->
+                <div class="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700">
+                    <div class="absolute w-4 h-4 bg-gray-300 dark:bg-gray-600 rounded-full -left-[9px] top-1 ring-4 ring-white dark:ring-darkBg"></div>
+                    <h3 class="text-lg font-bold">Class 12th (Senior Secondary)</h3>
+                    <p class="text-gray-700 dark:text-gray-300 font-medium mb-1">B.S. College, Danapur, Patna</p>
+                </div>
+                <!-- 10th Grade -->
+                <div class="relative pl-8 border-l-2 border-transparent">
+                    <div class="absolute w-4 h-4 bg-gray-300 dark:bg-gray-600 rounded-full -left-[9px] top-1 ring-4 ring-white dark:ring-darkBg"></div>
+                    <h3 class="text-lg font-bold">Class 10th (Secondary)</h3>
+                    <p class="text-gray-700 dark:text-gray-300 font-medium mb-1">D.A.V Public School, Cantt Road, Khagaul, Patna</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 fade-in delay-200 border-t border-gray-200 dark:border-gray-800">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <i class="ph ph-code text-primary"></i> Technical Skills
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Known Skills -->
+                <div class="bg-white dark:bg-darkCard p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                    <h3 class="text-lg font-bold mb-4 text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700 pb-2">Proficient In</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-full text-sm font-semibold flex items-center gap-2">
+                            <i class="ph-fill ph-file-c"></i> C
+                        </span>
+                        <span class="px-4 py-2 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 rounded-full text-sm font-semibold flex items-center gap-2">
+                            <i class="ph-fill ph-file-code"></i> Python
+                        </span>
+                    </div>
+                </div>
+                <!-- Learning Skills -->
+                <div class="bg-white dark:bg-darkCard p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                    <h3 class="text-lg font-bold mb-4 text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700 pb-2">Currently Learning</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full text-sm font-semibold">
+                            C++
+                        </span>
+                        <span class="px-4 py-2 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300 rounded-full text-sm font-semibold flex items-center gap-2">
+                            <i class="ph-fill ph-coffee"></i> Java
+                        </span>
+                        <span class="px-4 py-2 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 rounded-full text-sm font-semibold flex items-center gap-2">
+                            <i class="ph-fill ph-brain"></i> AI/ML
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Committees Section -->
+        <section id="experience" class="py-16 fade-in delay-300 border-t border-gray-200 dark:border-gray-800">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <i class="ph ph-briefcase text-primary"></i> Committees & Experience
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Next Gen AI Card -->
+                <div class="bg-white dark:bg-darkCard p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="mb-4">
+                        <span class="inline-block p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 mb-3">
+                            <i class="ph ph-robot text-2xl"></i>
+                        </span>
+                        <h3 class="text-xl font-bold mb-1">Active Member</h3>
+                        <p class="text-sm text-primary font-medium mb-3">CENTINEL’S NEXT GEN AI - ML/DL Domain</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                            Active participant in the planning and execution of events, team coordination, and supporting organizational operations within the Machine Learning & Deep Learning domain.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-xs text-gray-500">
+                        <i class="ph-fill ph-certificate"></i> Tenure Certified
+                    </div>
+                </div>
+
+                <!-- Pentathon Card -->
+                <div class="bg-white dark:bg-darkCard p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-purple-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="mb-4">
+                        <span class="inline-block p-3 rounded-lg bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 mb-3">
+                            <i class="ph ph-flag-checkered text-2xl"></i>
+                        </span>
+                        <h3 class="text-xl font-bold mb-1">Organizer & Participant</h3>
+                        <p class="text-sm text-purple-500 font-medium mb-3">PENTATHON 3.0 – HACKSTREET 4.0</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                            Successfully organized and participated in the hackathon event hosted by NEXT GEN AI. Advanced to the final round of the competition held from March 18 to 20.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-xs text-gray-500">
+                        <i class="ph-fill ph-certificate"></i> Finalist Certified
+                    </div>
+                </div>
+
+                <!-- Gen AI Workshop Card -->
+                <div class="bg-white dark:bg-darkCard p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-pink-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="mb-4">
+                        <span class="inline-block p-3 rounded-lg bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400 mb-3">
+                            <i class="ph ph-chalkboard-teacher text-2xl"></i>
+                        </span>
+                        <h3 class="text-xl font-bold mb-1">Workshop Participant</h3>
+                        <p class="text-sm text-pink-500 font-medium mb-3">Gen AI Workshop</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                            Completed a comprehensive 2-day hands-on training workshop focused on Generative AI, organized by 'The Women in Tech Club' at SRMIST.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-xs text-gray-500">
+                        <i class="ph-fill ph-certificate"></i> Participation Certified
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ✨ Custom Pitch Generator Section -->
+        <section id="pitch-generator" class="py-16 border-t border-gray-200 dark:border-gray-800">
+            <div class="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 p-8 rounded-3xl border border-indigo-100 dark:border-indigo-800/30 relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 text-9xl opacity-10 text-primary pointer-events-none">✨</div>
+                <h2 class="text-3xl font-bold mb-4 flex items-center gap-3">
+                    <i class="ph ph-magic-wand text-primary"></i> Custom Elevator Pitch
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl">
+                    Are you a recruiter? Enter a job role or company name below, and my AI will instantly generate a tailored pitch explaining why my background in Cloud Computing and AI/ML makes me a great fit!
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 mb-6 relative z-10">
+                    <input type="text" id="pitch-input" placeholder="e.g., Cloud Engineering Intern at Amazon..." class="flex-1 bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary dark:text-white outline-none">
+                    <button id="pitch-btn" class="bg-primary hover:bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 shrink-0">
+                        <i class="ph-fill ph-sparkle"></i> Generate Pitch
+                    </button>
+                </div>
+
+                <div id="pitch-output" class="hidden bg-white/80 dark:bg-darkCard/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 leading-relaxed shadow-inner">
+                    <!-- Output goes here -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 dark:border-gray-800 py-8 text-center bg-white dark:bg-darkBg">
+        <p class="text-gray-500 dark:text-gray-400 text-sm">
+            © 2026 Tanu Kumari. Built with HTML, CSS, and JS. 
+        </p>
+    </footer>
+
+    <!-- AI Chat Widget (Powered by Gemini) -->
+    <div id="ai-chat-widget" class="fixed bottom-6 right-6 z-50">
+        <!-- Chat Button -->
+        <button id="ai-chat-btn" class="bg-primary hover:bg-indigo-600 text-white rounded-full p-4 shadow-lg shadow-primary/30 transition-transform hover:scale-105 flex items-center gap-2 group">
+            <i class="ph ph-sparkle text-xl group-hover:animate-pulse"></i>
+            <span class="font-medium hidden md:inline">Ask my AI</span>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="ai-chat-window" class="hidden absolute bottom-20 right-0 w-80 md:w-96 bg-white dark:bg-darkCard rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col h-[450px] transition-all transform origin-bottom-right">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-primary to-purple-600 p-4 text-white flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <i class="ph-fill ph-robot text-xl"></i>
+                    <div>
+                        <h3 class="font-bold text-sm">Tanu's Portfolio Assistant ✨</h3>
+                        <p class="text-xs text-white/80">Powered by Gemini</p>
+                    </div>
+                </div>
+                <button id="ai-close-btn" class="text-white hover:text-gray-200 transition-colors"><i class="ph ph-x text-lg"></i></button>
+            </div>
+            <!-- Messages -->
+            <div id="ai-messages" class="flex-1 overflow-y-auto p-4 flex flex-col space-y-3 bg-gray-50 dark:bg-darkBg text-sm">
+                <div class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 p-3 rounded-xl rounded-tl-none max-w-[85%]">
+                    Hi there! 👋 I'm an AI assistant trained on Tanu's resume. Ask me anything about her skills, hackathons, or education!
+                </div>
+            </div>
+            <!-- Input -->
+            <div class="p-3 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-darkCard flex gap-2 items-center">
+                <input type="text" id="ai-input" placeholder="Ask about her skills..." class="flex-1 bg-gray-100 dark:bg-gray-800 border-none rounded-xl px-4 py-2 text-sm focus:ring-2 focus:ring-primary dark:text-white outline-none placeholder-gray-500 dark:placeholder-gray-400">
+                <button id="ai-send-btn" class="bg-primary text-white p-2 rounded-xl hover:bg-indigo-600 transition-colors flex items-center justify-center shrink-0">
+                    <i class="ph-fill ph-paper-plane-right text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Dark mode toggle functionality
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or system preference
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Optional: Pause animations initially and play when in view
+        document.querySelectorAll('.fade-in').forEach((el) => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // --- Gemini AI Assistant Logic ---
+        const chatBtn = document.getElementById('ai-chat-btn');
+        const chatWindow = document.getElementById('ai-chat-window');
+        const closeBtn = document.getElementById('ai-close-btn');
+        const sendBtn = document.getElementById('ai-send-btn');
+        const inputField = document.getElementById('ai-input');
+        const messagesContainer = document.getElementById('ai-messages');
+
+        let isChatOpen = false;
+        
+        chatBtn.addEventListener('click', () => {
+            isChatOpen = !isChatOpen;
+            chatWindow.classList.toggle('hidden', !isChatOpen);
+            if(isChatOpen) inputField.focus();
+        });
+
+        closeBtn.addEventListener('click', () => {
+            isChatOpen = false;
+            chatWindow.classList.add('hidden');
+        });
+
+        // The system prompt gives the LLM context about Tanu
+        const systemPrompt = `You are a helpful and professional AI assistant integrated into Tanu Kumari's portfolio website. 
+        Here is the factual information about Tanu:
+        - Current Status: B.Tech Student in Computer Science and Engineering (Specialization in Cloud Computing) at SRM Institute of Science and Technology, Kattankulathur, Chennai (Year 1, Semester 2). Section: AI1. Registration Number: RA2511028010162.
+        - Previous Education: 12th grade from B.S. College, Danapur, Patna. 10th grade from D.A.V Public School, Cantt Road, Khagaul, Patna.
+        - Technical Skills: Proficient in C, Python. Currently learning C++, Java, and AI/ML.
+        - Committees & Experience: 
+          1. Active member at CENTINEL'S NEXT GEN AI in the ML/DL domain.
+          2. Organized and participated in PENTATHON 3.0 - HACKSTREET 4.0 hosted by NEXT GEN AI (advanced to the final round, held March 18-20).
+          3. Participated in a 2-day hands-on "Gen AI Workshop" organized by 'The Women in Tech Club'.
+          
+        Guidelines:
+        - Answer visitor questions accurately based ONLY on this information.
+        - Do not hallucinate or invent skills/experiences not listed here.
+        - Keep answers concise, friendly, and professional (1-3 sentences max).
+        - Speak in the third person (e.g., "Tanu is...", "She has experience in...").
+        - If asked a question unrelated to her professional profile, politely redirect to her resume.`;
+
+        async function fetchGeminiResponse(userMessage) {
+            const apiKey = ""; // API key provided by the execution environment
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            
+            const payload = {
+                contents: [{ parts: [{ text: userMessage }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] }
+            };
+
+            try {
+                let retries = 5;
+                let delay = 1000;
+                let response;
+                
+                while (retries > 0) {
+                    response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    
+                    if (response.ok) break;
+                    
+                    retries--;
+                    await new Promise(res => setTimeout(res, delay));
+                    delay *= 2;
+                }
+
+                if (!response.ok) throw new Error('API Request failed');
+
+                const data = await response.json();
+                return data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't understand that.";
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                return "Oops! I'm having trouble connecting right now. Please try again later.";
+            }
+        }
+
+        async function handleSend() {
+            const text = inputField.value.trim();
+            if (!text) return;
+
+            // Add user message to UI
+            addMessage(text, 'user');
+            inputField.value = '';
+            
+            // Add loading state
+            const loadingId = 'loading-' + Date.now();
+            addMessage('<div class="flex gap-1 items-center h-4"><div class="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce"></div><div class="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce" style="animation-delay: 100ms"></div><div class="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce" style="animation-delay: 200ms"></div></div>', 'ai', loadingId);
+
+            // Fetch AI response
+            const aiResponseText = await fetchGeminiResponse(text);
+            
+            // Replace loading state with actual response
+            const loadingEl = document.getElementById(loadingId);
+            if(loadingEl) loadingEl.remove();
+            
+            addMessage(aiResponseText, 'ai');
+        }
+
+        function addMessage(text, sender, id = null) {
+            const div = document.createElement('div');
+            if (id) div.id = id;
+            
+            if (sender === 'user') {
+                div.className = 'bg-primary text-white p-3 rounded-xl rounded-tr-none max-w-[85%] ml-auto self-end break-words shadow-sm';
+            } else {
+                div.className = 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 p-3 rounded-xl rounded-tl-none max-w-[85%] break-words shadow-sm';
+                // Simple markdown processing for bold text
+                text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            }
+            
+            div.innerHTML = text;
+            messagesContainer.appendChild(div);
+            // Scroll to bottom
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        sendBtn.addEventListener('click', handleSend);
+        inputField.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleSend();
+        });
+
+        // --- ✨ Custom Pitch Generator Logic ---
+        const pitchBtn = document.getElementById('pitch-btn');
+        const pitchInput = document.getElementById('pitch-input');
+        const pitchOutput = document.getElementById('pitch-output');
+
+        pitchBtn.addEventListener('click', async () => {
+            const role = pitchInput.value.trim();
+            if (!role) return;
+
+            pitchOutput.classList.remove('hidden');
+            pitchOutput.innerHTML = '<div class="flex items-center gap-3 text-primary font-medium"><i class="ph ph-spinner animate-spin text-xl"></i> Crafting your tailored pitch...</div>';
+            
+            const pitchSystemPrompt = `You are an expert career coach advocating for Tanu Kumari. 
+            Tanu's details: B.Tech CSE (Cloud Computing) student at SRM IST. She is proficient in C, Python, and currently learning C++, Java, and AI/ML. She is an active member in NEXT GEN AI (ML/DL domain), organized the Pentathon 3.0 hackathon, and attended a Gen AI Workshop.
+            
+            The user will provide a target job role or company. Write a persuasive, enthusiastic 2-paragraph pitch explaining why Tanu is a strong candidate for this specific role. Connect her specific skills and proactive committee experience to the target role. 
+            
+            CRITICAL: Format the output using standard HTML tags only (<p>, <strong>, <br>). Do NOT use Markdown formatting (like ** or ##).`;
+
+            const apiKey = ""; // Provided by environment
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            
+            const payload = {
+                contents: [{ parts: [{ text: 'Target role/company: ' + role }] }],
+                systemInstruction: { parts: [{ text: pitchSystemPrompt }] }
+            };
+
+            try {
+                let retries = 5;
+                let delay = 1000;
+                let response;
+                
+                while (retries > 0) {
+                    response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (response.ok) break;
+                    retries--;
+                    await new Promise(res => setTimeout(res, delay));
+                    delay *= 2;
+                }
+
+                if (!response.ok) throw new Error('API Request failed');
+                const data = await response.json();
+                
+                // Extract response text and wrap paragraphs if needed
+                let text = data.candidates?.[0]?.content?.parts?.[0]?.text || "Failed to generate pitch.";
+                pitchOutput.innerHTML = `<div class="space-y-4">${text}</div>`;
+                
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                pitchOutput.innerHTML = "<span class='text-red-500'>Sorry, I couldn't generate the pitch right now. Please try again later.</span>";
+            }
+        });
+    </script>
+</body>
+</html>
