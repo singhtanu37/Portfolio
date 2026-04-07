@@ -23,4 +23,4 @@ Here is what the website looks like:
 ![Committees and Experience](Education.png)
 
 ## Live Demo
-**Live Website URL:** [Paste your Netlify/Vercel/GitHub Pages live link here]
+**Live Website URL:** [https://singhtanu37.github.io/Portfolio/]
