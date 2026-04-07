@@ -17,10 +17,10 @@ Here is what the website looks like:
 ![Home Page](Home.png)
 
 ### 2. Education & Technical Skills
-![Education and Skills](About (1).png)
+![Education and Skills](Skills.png)
 
 ### 3. Committees & Experience
-![Committees and Experience](About (2).png)
+![Committees and Experience](Education.png)
 
 ## Live Demo
 **Live Website URL:** [Paste your Netlify/Vercel/GitHub Pages live link here]
