@@ -14,7 +14,7 @@ I built this simple static website to complete my task of deploying a webpage to
 Here is what the website looks like:
 
 ### 1. Home Section
-![Home Page](home.png.png)
+![Home Page](home.png)
 
 ### 2. Education & Technical Skills
 ![Education and Skills](About (1).png)
