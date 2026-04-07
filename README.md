@@ -14,13 +14,13 @@ I built this simple static website to complete my task of deploying a webpage to
 Here is what the website looks like:
 
 ### 1. Home Section
-![Home Page](home.png)
+![Home Page](Home.png)
 
 ### 2. Education & Technical Skills
 ![Education and Skills](About (1).png)
 
 ### 3. Committees & Experience
-![Committees and Experience](about.png.png)
+![Committees and Experience](About (2).png)
 
 ## Live Demo
 **Live Website URL:** [Paste your Netlify/Vercel/GitHub Pages live link here]
